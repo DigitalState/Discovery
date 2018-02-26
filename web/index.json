@@ -1,0 +1,16 @@
+{
+    "assets": "api.assets.ds",
+    "authentication": "api.authentication.ds",
+    "camunda": "api.camunda.ds",
+    "cases": "api.cases.ds",
+    "cms": "api.cms.ds",
+    "discovery": "api.discovery.ds",
+    "formio": "api.formio.ds",
+    "identities": "api.identities.ds",
+    "interactions": "api.interactions.ds",
+    "logs": "api.logs.ds",
+    "records": "api.records.ds",
+    "services": "api.services.ds",
+    "tasks": "api.tasks.ds",
+    "topics": "api.topics.ds"
+}

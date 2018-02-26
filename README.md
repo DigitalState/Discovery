@@ -1,2 +1,1 @@
 # Discovery
-Microservices Discovery
