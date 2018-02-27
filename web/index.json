@@ -1,7 +1,7 @@
 {
     "assets": "api.assets.ds",
     "authentication": "api.authentication.ds",
-    "camunda": "api.camunda.ds/camunda",
+    "camunda": "api.camunda.ds/engine-rest",
     "cases": "api.cases.ds",
     "cms": "api.cms.ds",
     "discovery": "api.discovery.ds",
