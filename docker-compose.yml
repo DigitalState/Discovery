@@ -10,6 +10,6 @@ services:
       - '${DIRECTORY}/web:/srv/discovery/web'
 
 networks:
-    default:
-        external:
-          name: '${NETWORK}'
+  default:
+    external:
+      name: '${NETWORK}'
