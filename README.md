@@ -4,6 +4,8 @@ The DigitalState Discovery microservice provides a microservice location registr
 
 > Note: Currently, the discovery system is very rudimentary; a json file exposing microservice endpoints. This simple solution is used to help with discovery integration across the DigitalState platform until we upgrade our solution to something more robust and dynamic.
 
+[![Build Status](https://travis-ci.org/DigitalState/Discovery.svg?branch=develop)](https://travis-ci.org/DigitalState/Discovery)
+
 ## Table of Contents
 
 - [Synopsis](#synopsis)
