@@ -6,6 +6,7 @@ The DigitalState Discovery microservice provides a microservice location registr
 
 [![Build Status](https://travis-ci.org/DigitalState/Discovery.svg?branch=develop)](https://travis-ci.org/DigitalState/Discovery)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Discovery/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Discovery?branch=develop)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Discovery/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Discovery/?branch=develop)
 
 ## Table of Contents
 
