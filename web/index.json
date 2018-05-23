@@ -12,5 +12,6 @@
     "records": "api.records.ds",
     "services": "api.services.ds",
     "tasks": "api.tasks.ds",
+    "tenants": "api.tenants.ds",
     "topics": "api.topics.ds"
 }
