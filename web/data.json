@@ -1,0 +1,84 @@
+{
+  "assets": {
+    "host": "api.assets.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "authentication": {
+    "host": "api.authentication.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "camunda": {
+    "host": "api.camunda.ds/engine-rest",
+    "enabled": false
+  },
+  "cases": {
+    "host": "api.cases.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "cms": {
+    "host": "api.cms.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "discovery": {
+    "host": "api.discovery.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "formio": {
+    "host": "api.formio.ds",
+    "enabled": false
+  },
+  "identities": {
+    "host": "api.identities.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "proxy": {
+    "host": "proxy.ds",
+    "enabled": false
+  },
+  "records": {
+    "host": "api.records.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "services": {
+    "host": "api.services.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "tasks": {
+    "host": "api.tasks.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  },
+  "tenants": {
+    "host": "api.tenants.ds",
+    "enabled": false,
+    "attributes": {
+      "tenant": true
+    }
+  }
+}
