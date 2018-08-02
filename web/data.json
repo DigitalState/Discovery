@@ -3,6 +3,7 @@
     "host": "api.assets.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -10,6 +11,7 @@
     "host": "api.authentication.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -21,6 +23,7 @@
     "host": "api.cases.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -28,15 +31,13 @@
     "host": "api.cms.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
   "discovery": {
     "host": "api.discovery.ds",
-    "enabled": false,
-    "attributes": {
-      "tenant": true
-    }
+    "enabled": false
   },
   "formio": {
     "host": "api.formio.ds",
@@ -46,6 +47,7 @@
     "host": "api.identities.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -57,6 +59,7 @@
     "host": "api.records.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -64,6 +67,7 @@
     "host": "api.services.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -71,6 +75,7 @@
     "host": "api.tasks.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   },
@@ -78,6 +83,7 @@
     "host": "api.tenants.ds",
     "enabled": false,
     "attributes": {
+      "access": true,
       "tenant": true
     }
   }
