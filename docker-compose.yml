@@ -7,7 +7,7 @@ services:
       CONSUL_LOCAL_CONFIG: '${CONFIG}'
     command: 'agent'
     volumes:
-      - 'client_1_data:/consul/data'
+      - client_1_data:/consul/data
       - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
       - '${DIRECTORY}/consul/config/client/agent.json:/consul/config/client.json'
@@ -18,7 +18,7 @@ services:
       CONSUL_LOCAL_CONFIG: '${CONFIG}'
     command: 'agent'
     volumes:
-      - 'client_2_data:/consul/data'
+      - client_2_data:/consul/data
       - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
       - '${DIRECTORY}/consul/config/client/agent.json:/consul/config/client.json'
@@ -29,7 +29,7 @@ services:
       CONSUL_LOCAL_CONFIG: '${CONFIG}'
     command: 'agent'
     volumes:
-      - 'client_3_data:/consul/data'
+      - client_3_data:/consul/data
       - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
       - '${DIRECTORY}/consul/config/client/agent.json:/consul/config/client.json'
@@ -40,7 +40,7 @@ services:
       CONSUL_LOCAL_CONFIG: '${CONFIG}'
     command: 'agent'
     volumes:
-      - 'server_1_data:/consul/data'
+      - server_1_data:/consul/data
       - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
       - '${DIRECTORY}/consul/config/server/agent.json:/consul/config/server.json'
@@ -51,7 +51,7 @@ services:
       CONSUL_LOCAL_CONFIG: '${CONFIG}'
     command: 'agent'
     volumes:
-      - 'server_2_data:/consul/data'
+      - server_2_data:/consul/data
       - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
       - '${DIRECTORY}/consul/config/server/agent.json:/consul/config/server.json'
@@ -64,7 +64,7 @@ services:
       VIRTUAL_PORT: '${VIRTUAL_PORT}'
     command: 'agent'
     volumes:
-      - 'server_bootstrap_data:/consul/data'
+      - server_bootstrap_data:/consul/data
       - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
       - '${DIRECTORY}/consul/config/bootstrap/agent.json:/consul/config/bootstrap.json'

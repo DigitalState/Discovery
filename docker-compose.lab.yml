@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  client_1: &hosts
-    extra_hosts:
+  client_1:
+    extra_hosts: &hosts
       - 'api.assets.lab.ds:${PROXY_HOST}'
       - 'api.authentication.lab.ds:${PROXY_HOST}'
       - 'api.camunda.lab.ds:${PROXY_HOST}'
@@ -20,12 +20,17 @@ services:
       - 'api.tenants.lab.ds:${PROXY_HOST}'
       - 'api.topics.lab.ds:${PROXY_HOST}'
 
-  client_2: *hosts
+  client_2:
+    extra_hosts: *hosts
 
-  client_3: *hosts
+  client_3:
+    extra_hosts: *hosts
 
-  server_1: *hosts
+  server_1:
+    extra_hosts: *hosts
 
-  server_2: *hosts
+  server_2:
+    extra_hosts: *hosts
 
-  bootstrap: *hosts
+  bootstrap:
+    extra_hosts: *hosts
