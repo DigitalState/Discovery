@@ -1,3 +1,6 @@
 /.idea
 /.env
 /.env.*
+/consul/client/config/local.json
+/consul/server/config/local.json
+/consul/server_bootstrap/config/local.json

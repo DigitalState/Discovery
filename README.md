@@ -1,8 +1,8 @@
 # Discovery
 
-The DigitalState Discovery microservice provides a microservice location registry for inter-microservice communication.
+The DigitalState Discovery microservice provides a solution for service discovery, health checking, architecture configurations and secure service communication.
 
-> Note: Currently, the discovery system is very rudimentary; a json file exposing microservice endpoints. This simple solution is used to help with discovery integration across the DigitalState platform until we upgrade our solution to something more robust and dynamic.
+It uses [Consul](https://www.consul.io/intro/index.html).
 
 [![Build Status](https://travis-ci.org/DigitalState/Discovery.svg?branch=develop)](https://travis-ci.org/DigitalState/Discovery)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Discovery/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Discovery?branch=develop)

@@ -1,13 +1,92 @@
 version: '3'
 
 services:
-  nginx:
-    image: nginx:1.11-alpine
+  client_1:
+    image: consul:1.2.2
     environment:
-      - VIRTUAL_HOST
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+    command: 'agent'
     volumes:
-      - '${DIRECTORY}/docker/nginx/conf.d:/etc/nginx/conf.d:ro'
-      - '${DIRECTORY}/web:/srv/discovery/web'
+      - 'client_1_data:/consul/data'
+      - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
+      - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
+      - '${DIRECTORY}/consul/config/client/agent.json:/consul/config/client.json'
+
+  client_2:
+    image: consul:1.2.2
+    environment:
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+    command: 'agent'
+    volumes:
+      - 'client_2_data:/consul/data'
+      - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
+      - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
+      - '${DIRECTORY}/consul/config/client/agent.json:/consul/config/client.json'
+
+  client_3:
+    image: consul:1.2.2
+    environment:
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+    command: 'agent'
+    volumes:
+      - 'client_3_data:/consul/data'
+      - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
+      - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
+      - '${DIRECTORY}/consul/config/client/agent.json:/consul/config/client.json'
+
+  server_1:
+    image: consul:1.2.2
+    environment:
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+    command: 'agent'
+    volumes:
+      - 'server_1_data:/consul/data'
+      - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
+      - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
+      - '${DIRECTORY}/consul/config/server/agent.json:/consul/config/server.json'
+
+  server_2:
+    image: consul:1.2.2
+    environment:
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+    command: 'agent'
+    volumes:
+      - 'server_2_data:/consul/data'
+      - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
+      - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
+      - '${DIRECTORY}/consul/config/server/agent.json:/consul/config/server.json'
+
+  bootstrap:
+    image: consul:1.2.2
+    environment:
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+      VIRTUAL_HOST: '${VIRTUAL_HOST}'
+      VIRTUAL_PORT: '${VIRTUAL_PORT}'
+    command: 'agent'
+    volumes:
+      - 'server_bootstrap_data:/consul/data'
+      - '${DIRECTORY}/consul/config/agent.json:/consul/config/agent.json'
+      - '${DIRECTORY}/consul/config/acl.json:/consul/config/acl.json'
+      - '${DIRECTORY}/consul/config/bootstrap/agent.json:/consul/config/bootstrap.json'
+
+volumes:
+  client_1_data:
+    driver: local
+
+  client_2_data:
+    driver: local
+
+  client_3_data:
+    driver: local
+
+  server_1_data:
+    driver: local
+
+  server_2_data:
+    driver: local
+
+  server_bootstrap_data:
+    driver: local
 
 networks:
   default:
