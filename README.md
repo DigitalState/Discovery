@@ -2,7 +2,7 @@
 
 The DigitalState Discovery microservice provides a solution for service discovery, health checking, architecture configurations and secure service communication.
 
-It uses [Consul](https://www.consul.io/intro/index.html).
+It uses [Consul](https://www.consul.io/intro/index.html) by HashiCorp.
 
 [![Build Status](https://travis-ci.org/DigitalState/Discovery.svg?branch=develop)](https://travis-ci.org/DigitalState/Discovery)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Discovery/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Discovery?branch=develop)
