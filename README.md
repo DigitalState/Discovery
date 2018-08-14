@@ -11,12 +11,19 @@ It uses [Consul](https://www.consul.io/intro/index.html) by HashiCorp.
 ## Table of Contents
 
 - [Documentation](#documentation)
+- [References](#references)
 - [Contributing](#contributing)
 - [Credits](#credits)
 
 ## Documentation
 
 Documentation...
+
+Further documentation can be found in the [Documentation Repository](https://github.com/DigitalState/Documentation)
+
+## References
+
+- [Docker](references/docker.md)
 
 ## Contributing
 
