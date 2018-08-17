@@ -7,6 +7,7 @@ It uses [Consul](https://www.consul.io/intro/index.html) by HashiCorp.
 [![Build Status](https://travis-ci.org/DigitalState/Discovery.svg?branch=develop)](https://travis-ci.org/DigitalState/Discovery)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Discovery/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Discovery?branch=develop)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Discovery/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Discovery/?branch=develop)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Table of Contents
 
