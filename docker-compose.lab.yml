@@ -1,6 +1,1 @@
 version: '3'
-
-services:
-  bootstrap:
-    ports:
-      - 8500:8500

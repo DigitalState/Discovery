@@ -23,6 +23,15 @@ services:
 
   bootstrap:
     <<: *agent
+    environment:
+      CONSUL_LOCAL_CONFIG: '${CONFIG}'
+      SERVICE_8300_IGNORE: 'true'
+      SERVICE_8301_IGNORE: 'true'
+      SERVICE_8302_IGNORE: 'true'
+      SERVICE_8600_IGNORE: 'true'
+      SERVICE_8500_ID: '${COMPOSE_PROJECT_NAME}_bootstrap_8500'
+      SERVICE_8500_NAME: '${COMPOSE_PROJECT_NAME}_bootstrap_8500'
+      SERVICE_8500_TAGS: 'proxy.enable=true,proxy.tags=external,proxy.frontend.entryPoints=http,proxy.frontend.rule=Host:${BOOTSTRAP_HOST}'
     volumes:
       - '${DIRECTORY}/agent/agent.json:/consul/config/agent.json'
       - '${DIRECTORY}/agent/acl.json:/consul/config/acl.json'
