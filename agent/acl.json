@@ -1,0 +1,5 @@
+{
+  "acl_datacenter": "ds",
+  "acl_default_policy": "deny",
+  "acl_down_policy": "deny"
+}

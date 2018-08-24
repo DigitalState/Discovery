@@ -1,0 +1,4 @@
+{
+  "server": true,
+  "retry_join": ["bootstrap"]
+}
