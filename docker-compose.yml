@@ -23,13 +23,10 @@ services:
 
   bootstrap:
     <<: *agent
-    environment:
-      CONSUL_LOCAL_CONFIG: '${CONFIG}'
-      SERVICE_IGNORE: 'true'
     labels:
       traefik.enable: 'true'
       traefik.frontend.entryPoints: http
-      traefik.port: 8500
+      traefik.port: '8500'
       traefik.frontend.rule: 'Host:${UI_HOST}'
     volumes:
       - '${DIRECTORY}/agent/agent.json:/consul/config/agent.json'
