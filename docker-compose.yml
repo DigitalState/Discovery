@@ -23,6 +23,8 @@ services:
 
   bootstrap:
     <<: *agent
+    ports:
+      - 8500:8500
     labels:
       traefik.enable: 'true'
       traefik.frontend.entryPoints: http
