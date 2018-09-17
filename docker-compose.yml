@@ -35,7 +35,7 @@ services:
       - bootstrap_data:/consul/data
 
   registrator:
-    image: gliderlabs/registrator:v7
+    image: gliderlabs/registrator:master
     depends_on:
       - bootstrap
     environment:
