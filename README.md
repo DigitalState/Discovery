@@ -18,9 +18,7 @@ It uses [Consul](https://www.consul.io/intro/index.html) by HashiCorp.
 
 ## Documentation
 
-Documentation...
-
-Further documentation can be found in the [Documentation Repository](https://github.com/DigitalState/Documentation)
+Further documentation can be found in the [Documentation Repository](https://github.com/DigitalState/Documentation).
 
 ## References
 
