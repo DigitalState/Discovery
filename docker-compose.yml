@@ -5,7 +5,6 @@ services:
     image: consul:1.2.2
     environment:
       CONSUL_LOCAL_CONFIG: '${CONFIG}'
-      SERVICE_IGNORE: 'true'
     command: 'agent'
     volumes:
       - '${DIRECTORY}/agent/agent.json:/consul/config/agent.json'
