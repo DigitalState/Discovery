@@ -6,8 +6,8 @@ services:
     build:
       context: ./client
     environment:
-      CONSUL_LOCAL_CONFIG: '${CONFIG}'
-    command: 'agent'
+      CONSUL_LOCAL_CONFIG: ${CONFIG}
+    command: agent
     volumes:
       - client_data:/consul/data
 
@@ -16,8 +16,8 @@ services:
     build:
       context: ./server
     environment:
-      CONSUL_LOCAL_CONFIG: '${CONFIG}'
-    command: 'agent'
+      CONSUL_LOCAL_CONFIG: ${CONFIG}
+    command: agent
     volumes:
       - server_data:/consul/data
 
@@ -26,8 +26,8 @@ services:
     build:
       context: ./bootstrap
     environment:
-      CONSUL_LOCAL_CONFIG: '${CONFIG}'
-    command: 'agent'
+      CONSUL_LOCAL_CONFIG: ${CONFIG}
+    command: agent
     volumes:
       - bootstrap_data:/consul/data
 
