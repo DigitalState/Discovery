@@ -1,4 +1,10 @@
 {
+  "datacenter": "ds",
+  "client_addr": "0.0.0.0",
+  "log_level": "warn",
+  "acl_datacenter": "ds",
+  "acl_default_policy": "deny",
+  "acl_down_policy": "deny",
   "server": true,
   "retry_join": ["bootstrap"]
 }
