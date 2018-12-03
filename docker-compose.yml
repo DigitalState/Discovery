@@ -10,6 +10,10 @@ services:
     command: agent
     volumes:
       - client_data:/consul/data
+    networks:
+      default:
+        aliases:
+          - discovery_client
 
   server:
     image: digitalstate/discovery-server
@@ -20,6 +24,10 @@ services:
     command: agent
     volumes:
       - server_data:/consul/data
+    networks:
+      default:
+        aliases:
+          - discovery_server
 
   bootstrap:
     image: digitalstate/discovery-bootstrap
@@ -30,6 +38,10 @@ services:
     command: agent
     volumes:
       - bootstrap_data:/consul/data
+    networks:
+      default:
+        aliases:
+          - discovery_bootstrap
 
 volumes:
   client_data:
