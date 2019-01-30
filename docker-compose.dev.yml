@@ -1,1 +1,14 @@
-version: '3'
+version: '3.4'
+
+services:
+  client:
+    volumes:
+      - ${DIRECTORY}/client/agent.json:/consul/config/agent.json
+
+  server:
+    volumes:
+      - ${DIRECTORY}/server/agent.json:/consul/config/agent.json
+
+  bootstrap:
+    volumes:
+      - ${DIRECTORY}/bootstrap/agent.json:/consul/config/agent.json

@@ -1,48 +1,47 @@
-version: '3'
+version: '3.4'
 
 services:
-  client: &agent
-    image: consul:1.2.2
+  client:
+    image: digitalstate/discovery-client
+    build:
+      context: ./client
     environment:
-      CONSUL_LOCAL_CONFIG: '${CONFIG}'
-      SERVICE_IGNORE: 'true'
-    command: 'agent'
+      CONSUL_LOCAL_CONFIG: ${CONFIG}
+    command: agent
     volumes:
-      - '${DIRECTORY}/agent/agent.json:/consul/config/agent.json'
-      - '${DIRECTORY}/agent/acl.json:/consul/config/acl.json'
-      - '${DIRECTORY}/client/agent.json:/consul/config/client.json'
       - client_data:/consul/data
+    networks:
+      default:
+        aliases:
+          - discovery_client
 
   server:
-    <<: *agent
+    image: digitalstate/discovery-server
+    build:
+      context: ./server
+    environment:
+      CONSUL_LOCAL_CONFIG: ${CONFIG}
+    command: agent
     volumes:
-      - '${DIRECTORY}/agent/agent.json:/consul/config/agent.json'
-      - '${DIRECTORY}/agent/acl.json:/consul/config/acl.json'
-      - '${DIRECTORY}/server/agent.json:/consul/config/server.json'
       - server_data:/consul/data
+    networks:
+      default:
+        aliases:
+          - discovery_server
 
   bootstrap:
-    <<: *agent
-    labels:
-      traefik.enable: 'true'
-      traefik.frontend.entryPoints: http
-      traefik.port: '8500'
-      traefik.frontend.rule: 'Host:${UI_HOST}'
-    volumes:
-      - '${DIRECTORY}/agent/agent.json:/consul/config/agent.json'
-      - '${DIRECTORY}/agent/acl.json:/consul/config/acl.json'
-      - '${DIRECTORY}/bootstrap/agent.json:/consul/config/bootstrap.json'
-      - bootstrap_data:/consul/data
-
-  registrator:
-    image: gliderlabs/registrator:master
-    depends_on:
-      - bootstrap
+    image: digitalstate/discovery-bootstrap
+    build:
+      context: ./bootstrap
     environment:
-      CONSUL_HTTP_TOKEN: '${DISCOVERY_TOKEN}'
-    command: '-internal consul://bootstrap:8500'
+      CONSUL_LOCAL_CONFIG: ${CONFIG}
+    command: agent
     volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - bootstrap_data:/consul/data
+    networks:
+      default:
+        aliases:
+          - discovery_bootstrap
 
 volumes:
   client_data:
@@ -53,8 +52,3 @@ volumes:
 
   bootstrap_data:
     driver: local
-
-networks:
-  default:
-    external:
-      name: '${NETWORK}'
