@@ -2,13 +2,19 @@ version: '3.4'
 
 services:
   client:
+    build:
+      context: ./client
     volumes:
       - ${DIRECTORY}/client/agent.json:/consul/config/agent.json
 
   server:
+    build:
+      context: ./server
     volumes:
       - ${DIRECTORY}/server/agent.json:/consul/config/agent.json
 
   bootstrap:
+    build:
+      context: ./bootstrap
     volumes:
       - ${DIRECTORY}/bootstrap/agent.json:/consul/config/agent.json

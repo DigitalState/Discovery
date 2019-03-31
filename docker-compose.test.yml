@@ -1,1 +1,14 @@
 version: '3.4'
+
+services:
+  client:
+    build:
+      context: ./client
+
+  server:
+    build:
+      context: ./server
+
+  bootstrap:
+    build:
+      context: ./bootstrap

@@ -2,9 +2,7 @@ version: '3.4'
 
 services:
   client:
-    image: digitalstate/discovery-client
-    build:
-      context: ./client
+    image: digitalstate/discovery:client-0.16.0
     environment:
       CONSUL_LOCAL_CONFIG: ${CONFIG}
     command: agent
@@ -16,9 +14,7 @@ services:
           - discovery_client
 
   server:
-    image: digitalstate/discovery-server
-    build:
-      context: ./server
+    image: digitalstate/discovery:server-0.16.0
     environment:
       CONSUL_LOCAL_CONFIG: ${CONFIG}
     command: agent
@@ -30,9 +26,7 @@ services:
           - discovery_server
 
   bootstrap:
-    image: digitalstate/discovery-bootstrap
-    build:
-      context: ./bootstrap
+    image: digitalstate/discovery:bootstrap-0.16.0
     environment:
       CONSUL_LOCAL_CONFIG: ${CONFIG}
     command: agent
